@@ -11,10 +11,17 @@
 |
 */
 
+# Auth
+Auth::routes();
+
+# 前台
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+# 後台
+Route::prefix('/manage')->group(function () {
+    Route::get('/index', 'AnnouncementController@showManageIndex')->name('manage-index');
+});
+
