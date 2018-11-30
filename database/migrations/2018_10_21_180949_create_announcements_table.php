@@ -20,7 +20,7 @@ class CreateAnnouncementsTable extends Migration
             $table->string('title');
 
             $table->text('content');
-            $table->text('reference');
+            $table->text('reference')->nullable();
 
             $table->integer('category_id')->nullable();
 

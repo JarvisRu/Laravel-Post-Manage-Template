@@ -23,5 +23,10 @@ Route::get('/', function () {
 # 後台
 Route::prefix('/manage')->group(function () {
     Route::get('/index', 'AnnouncementController@showManageIndex')->name('manage-index');
+
+    Route::get('/view-new', 'AnnouncementController@viewNewPage')->name('view-new');
+    Route::post('/index', 'AnnouncementController@newAnnouncement')->name('new-announcement');
+    Route::get('/view-announcement/{announcement}/{mode}', 'AnnouncementController@viewAnnouncement')->name('view-edit-announcement');
+    Route::put('/update-announcement/{announcement}', 'AnnouncementController@updateAnnouncement')->name('update-announcement');
 });
 
