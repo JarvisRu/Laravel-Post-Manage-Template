@@ -33,6 +33,7 @@ $ php artisan serve
 ```shell
 $ php artisan serve --port=xxxx
 ```
+4. 於右上角登入至後台
 
 ## Password for login
 ```
@@ -41,9 +42,22 @@ password: admin2018
 ```
 
 ## Feature
-
+1. 使用 Auth 登入
+2. 後台首頁 : 管理所有公告(顯示、新增、修改、編輯、刪除)
+3. 新增頁面 : 新增新的公告
+4. 搜尋頁面 : 可依照條件搜尋公告(主旨、日期、分類)
+5. 顯示頁面 : 顯示特定公告
+6. 編輯頁面 : 編輯特定公告
 
 ## Field for Announcement
+- 目前已設定之欄位
+    - title
+    - category
+    - content
+    - reference
 
+## Default Category
+1. 使用seed建立category
+2. 可於 `/database/seeds/CatagoryTableSeeder` 修改
 
 
