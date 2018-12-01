@@ -1,4 +1,6 @@
 # Post Manage System - Template
+## Overview
+![](https://i.imgur.com/RF1DHuj.png)
 
 ## Build locally
 ##### 1. 將專案 clone/pull 至 local
@@ -28,12 +30,12 @@ $ php artisan migrate --seed
 ```shell
 $ php artisan serve
 ```
-2. 至 **localhost:8000**看 是否有畫面
-3. 若port8000已被占用 可下此指令更改port
+2. 至 **localhost:8000**看，是否有畫面
+3. 若port8000已被占用，可下此指令更改port
 ```shell
 $ php artisan serve --port=xxxx
 ```
-4. 於右上角登入至後台
+4. 於右上角登入至後台，顯示如上例圖代表成功
 
 ## Password for login
 ```
@@ -48,11 +50,13 @@ password: admin2018
 4. 搜尋頁面 : 可依照條件搜尋公告(主旨、日期、分類)
 5. 顯示頁面 : 顯示特定公告
 6. 編輯頁面 : 編輯特定公告
+7. 使用Session提醒目前操作
 
 ## Field for Announcement
 - 目前已設定之欄位
     - title
     - category
+    - reach
     - content
     - reference
 
