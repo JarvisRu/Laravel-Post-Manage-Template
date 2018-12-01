@@ -6,7 +6,16 @@
         <div class="col-md-8">
 
             <div class="card">
-                <h3 class="card-header text-center">公告內容</h3>
+                <div class="card-header">
+                    <h3 class="text-center">公告內容</h3>
+                    <form id="delete-announcement-{{ $announcement->id }}" style="text-align:right" action="{{ route('delete-announcement', ['announcement' => $announcement->id]) }}" method="POST">
+                        {{ csrf_field() }} {{ method_field('DELETE') }}
+                        <a href="{{ route('view-edit-announcement', ['announcement' => $announcement->id, 'mode' => 2]) }}" class="btn">編輯公告</a> |
+                        <a href="#delete-announcement-{{ $announcement->id }}" class="btn" onclick="if(confirm('確定要刪除嗎？')) $('#delete-announcement-{{ $announcement->id }}').submit()">
+                            刪除此公告</a>
+                    </form>
+
+                </div>
                 <div class="card-body">
 
                     <form class="form-horizontal">
